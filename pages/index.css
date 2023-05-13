@@ -1,2 +1,11 @@
 @import url(../vendor/normalize.css);
+
 @import url(../blocks/page/page.css);
+
+@import url(../blocks/content/content.css);
+
+@import url(../blocks/login-form/login-form.css);
+
+@import url(../blocks/decor/decor__image.css);
+
+@import url(../blocks/footer/footer.css);

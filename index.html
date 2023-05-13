@@ -5,43 +5,68 @@
     <title>Document</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
-<body>
+<body class="page">
 <header class="header"></header>
 <main class="content">
-    <section class="popup">
-        <img src="" alt="логотип" class="popup__logo">
-        <h2 class="popup__title">Войти в личный кабинет</h2>
-        <p class="popup__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
-        <form class="popup__form">
-            <input type="text" placeholder="Введите номер телефона или электронную почту">
-            <button></button>
-            <div>
-                <p>У вас ещё нет аккаунта?</p>
-                <p>Зарегистрироваться</p>
-            </div>
-            <div>
-                <p>Возникли проблемы со входом?</p>
-                <p>Восстановить доступ</p>
-            </div>
-        </form>
-    </section>
-    
-    <section></section>
-</main>
-<footer class="footer">
-    <h2>© PAY2ME 2023</h2>
-    <div>
-        <p>ООО «Куарми» ИНН 7743364603</p>
-        <p>Юридический адрес 125445, Г. Москва, Ул. Беломорская, Д. 11, К. 1/290</p>
-    </div>
-    <div>
-        <p>Политика конфиденциальности</p>
-        <p>Пользовательское соглашение</p>
-        <div>
-            <img src="" alt="Язык    ">
-            <p>Ru</p>
+
+    <button class="back__button">
+        <img src="" alt="">
+        <p>Назад</p>
+    </button>
+
+    <section class="login-form">
+        <img src="./images/PAY2ME.svg" alt="логотип" class="login-form__logo">
+        <div class="login-form__title-container">
+            <h2 class="login-form__title">Войти в личный кабинет</h2>
+            <p class="login-form__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
         </div>
+        <form class="login-form__form">
+            <input type="text" class="login-form__input" placeholder="Введите номер телефона или электронную почту">
+            <button class="login-form__button">
+                <p>Далее</p>
+                <img src="./images/arrow-right.svg" alt="Стрелка">
+            </button>
+        </form>
+        <div class="login-form__text-container">
+            <p class="login-form__text">У вас ещё нет аккаунта?</p>
+            <p class="login-form__link-text">Зарегистрироваться</p>
+        </div>
+        <div class="login-form__text-container">
+            <p class="login-form__text">Возникли проблемы со входом?</p>
+            <p class="login-form__link-text">Восстановить доступ</p>
+        </div>  
+    </section>
+
+
+    <section class="footer-popup">
+        <div class="footer-popup__elements-container">
+            <img src="./images/Flag.svg" alt="флаг">
+            <p class="footer-popup__sign">RU</p>
+            <p class="footer-popup__text"></p>
+        </div>
+        <div class="footer-popup__elements-container">
+            <img src="./images/usaflag.svg" alt="Флаг">
+            <p class="footer-popup__sign">EN</p>
+            <p class="footer-popup__text"></p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__text-container">
+        <h2  class="footer__copyright">© PAY2ME 2023</h2>
+        <p class="footer__text">ООО «Куарми» ИНН 7743364603</p>
+        <p class="footer__text">Юридический адрес 125445, Г. Москва, Ул. Беломорская, Д. 11, К. 1/290</p>
+    </div>
+    <div class="footer__link-container">
+        <p class="footer__link-text">Политика конфиденциальности</p>
+        <p class="footer__link-text">Пользовательское соглашение</p>
+        <button class="footer__button">
+            <img src="./images/Flag.svg" alt="флаг" class="footer__button-image">
+            <p class="footer__button-text">Ru</p>
+        </button>
     </div>
 </footer>
+
 </body>
 </html>
