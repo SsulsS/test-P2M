@@ -1,0 +1,11 @@
+.form__hide-button{
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border: 1px solid red;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 11px 20px 11px 5px;
+}

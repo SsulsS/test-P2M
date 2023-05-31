@@ -1,0 +1,8 @@
+.footer-popup__overlay{
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid red;
+}

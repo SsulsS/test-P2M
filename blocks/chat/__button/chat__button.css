@@ -1,0 +1,7 @@
+.chat__button{
+    border: none;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(180deg, #744CED 18.75%, #B650E6 88.02%);
+    border-radius: 100%;
+}

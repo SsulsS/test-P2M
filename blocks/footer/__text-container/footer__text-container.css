@@ -1,0 +1,5 @@
+.footer__text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

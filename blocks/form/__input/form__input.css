@@ -1,0 +1,23 @@
+.form__input{
+    height: 48px;
+    width: 380px;
+    border: 1px solid #F1ECFF;
+    border-radius: 10px;
+    margin-right: 20px;
+    outline: none;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    
+    padding: 0;
+}
+
+@media screen and (max-width:360px) {
+    .form__input{
+        height: 48px;
+        width: 328px;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -5,37 +5,130 @@
     <title>Document</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
+
 <body class="page">
-<header class="header"></header>
+
 <main class="content">
 
-    <button class="back__button">
-        <img src="" alt="">
-        <p>Назад</p>
+    <div class="decor">
+        <img src="./images/prew.png" alt="" class="decor__image">
+    </div>
+
+    <button class="back-button">
+        <img src="./images/arrow-left.svg" alt="Стрелка" class="back-button__image">
+        <p class="back-button__text">Назад</p>
     </button>
 
-    <section class="login-form">
-        <img src="./images/PAY2ME.svg" alt="логотип" class="login-form__logo">
-        <div class="login-form__title-container">
-            <h2 class="login-form__title">Войти в личный кабинет</h2>
-            <p class="login-form__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+    <section class="auth auth_opened">
+
+        <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
+        <div class="auth__title-container">
+            <h2 class="auth__title">Войти в личный кабинет</h2>
+            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
         </div>
-        <form class="login-form__form">
-            <input type="text" class="login-form__input" placeholder="Введите номер телефона или электронную почту">
-            <button class="login-form__button">
-                <p>Далее</p>
-                <img src="./images/arrow-right.svg" alt="Стрелка">
-            </button>
+
+        <form name="login-form" class="form login-form" novalidate>
+            <fieldset class="form__set">
+                <label class="form__label">
+                    <input type="text" class="form__input form__input_type_name" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
+                    <span class="form__span form__input-error name-input-error"></span>
+                </label>
+                <button class="form__hide-button">
+                    <img src="./images/hide.svg" alt="">
+                </button>
+                <button type="submit" class="form__button form__submit" name="form-button">
+                    <p>Далее</p>
+                    <img src="./images/arrow-right.svg" alt="Стрелка">
+                </button>
+            </fieldset>
         </form>
-        <div class="login-form__text-container">
-            <p class="login-form__text">У вас ещё нет аккаунта?</p>
-            <p class="login-form__link-text">Зарегистрироваться</p>
+
+        <div class="auth__text-container">
+            <p class="auth__text">У вас ещё нет аккаунта?</p>
+            <p class="auth__link">Зарегистрироваться</p>
         </div>
-        <div class="login-form__text-container">
-            <p class="login-form__text">Возникли проблемы со входом?</p>
-            <p class="login-form__link-text">Восстановить доступ</p>
-        </div>  
+        <div class="auth__text-container">
+            <p class="auth__text">Возникли проблемы со входом?</p>
+            <p class="auth__link">Восстановить доступ</p>
+        </div>
+
     </section>
+
+<!--------------------------------------------------------------------->
+
+    <section class="auth">
+        <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
+        <div class="auth__title-container">
+            <h2 class="auth__title">Войти в личный кабинет</h2>
+            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+        </div>
+
+        <form name="login-form" class="form password-form" novalidate>
+            <fieldset class="form__set">
+                <label class="form__label">
+                    <input type="password" class="form__input form__input_type_name form__input" id="name-input" placeholder="Введите пароль    " name="form-input-name" minlength="2" maxlength="40" required>
+                    <span class="form__span form__input-error name-input-error"></span>
+                </label>
+                <button type="submit" class="form__button form__submit" name="form-button">
+                    <p>Далее</p>
+                    <img src="./images/arrow-right.svg" alt="Стрелка">
+                </button>
+            </fieldset>
+        </form>
+
+        <div class="auth__text-container">
+            <p class="auth__text">У вас ещё нет аккаунта?</p>
+            <p class="auth__link">Зарегистрироваться</p>
+        </div>
+        <div class="auth__text-container">
+            <p class="auth__text">Возникли проблемы со входом?</p>
+            <p class="auth__link">Восстановить доступ</p>
+        </div>
+    </section>
+
+ <!--------------------------------------------------------------->
+
+    <section class="auth">
+        <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
+        <div class="auth__title-container">
+            <h2 class="auth__title">Войти в личный кабинет</h2>
+            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+        </div>
+
+        <form name="login-form" class="form error-form" novalidate>
+            <fieldset class="form__set form__set-error">
+                <label class="form__label">
+                    <input type="text" class="form__input form__input_type_login form__input" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
+                    <span class="form__input-error name-input-error"></span>
+                </label>
+                <label class="form__label">
+                    <input type="password" class="form__input form__input_type_password form__input" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
+                    <span class="form__input-error name-input-error"></span>
+                </label>
+                <button type="submit" class="form__button form__submit" name="form-button">
+                    <p>Далее</p>
+                    <img src="./images/arrow-right.svg" alt="Стрелка">
+                </button>
+            </fieldset>
+        </form>
+
+        <div class="auth__text-container">
+            <p class="auth__text">У вас ещё нет аккаунта?</p>
+            <p class="auth__link">Зарегистрироваться</p>
+        </div>
+        <div class="auth__text-container">
+            <p class="auth__text">Возникли проблемы со входом?</p>
+            <p class="auth__link">Восстановить доступ</p>
+        </div>
+    </section>
+
+    <section class="chat">
+        <p class="chat__text">Нужна помощь?</p>
+        <button class="chat__button">
+            <img src="./images/chat.svg" alt="Чат">
+        </button>
+    </section>
+
 </main>
 
 <footer class="footer">
@@ -49,25 +142,29 @@
     <div class="footer__link-container">
         <p class="footer__link-text">Политика конфиденциальности</p>
         <p class="footer__link-text">Пользовательское соглашение</p>
-        <button class="footer__button">
+        <button  type="button" class="footer__button" >
             <img src="./images/Flag.svg" alt="флаг" class="footer__button-image">
             <p class="footer__button-text">Ru</p>
         </button>
+
+        <div class="footer-popup">
+            <div class="footer-popup__overlay"></div>
+            <div class="footer-popup__elements-container footer-popup__elements-container_active">
+                <img src="./images/Flag.svg" alt="флаг" class="footer-popup__image">
+                <p class="footer-popup__sign">RU</p>
+                <p class="footer-popup__text">Русский</p>
+            </div>
+            <div class="footer-popup__elements-container">
+                <img src="./images/usaflag.svg" alt="Флаг" class="footer-popup__image">
+                <p class="footer-popup__sign">EN</p>
+                <p class="footer-popup__text">Английский</p>
+            </div>
+        </div>
     </div>
     
-    <div class="footer-popup">
-        <div class="footer-popup__elements-container footer-popup__elements-container_active">
-            <img src="./images/Flag.svg" alt="флаг" class="footer-popup__image">
-            <p class="footer-popup__sign">RU</p>
-            <p class="footer-popup__text">Русский</p>
-        </div>
-        <div class="footer-popup__elements-container">
-            <img src="./images/usaflag.svg" alt="Флаг" class="footer-popup__image">
-            <p class="footer-popup__sign">EN</p>
-            <p class="footer-popup__text">Английский</p>
-        </div>
-    </div>
 </footer>
 
+<script src="./script/FormValidator.js"></script>
+<script src="./script/index.js"></script>
 </body>
 </html>

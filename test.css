@@ -1,0 +1,33 @@
+<section class="auth auth_opened">
+
+        <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
+        <div class="auth__title-container">
+            <h2 class="auth__title">Войти в личный кабинет</h2>
+            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+        </div>
+
+        <form name="login-form" class="form login-form" novalidate>
+            <fieldset class="form__set">
+                <label class="form__label">
+                    <input type="text" class="form__input form__input_type_name form__input" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
+                    <span class="form__input-error name-input-error"></span>
+                </label>
+                <button type="submit" class="form__button form__submit" name="form-button">
+                    <p>Далее</p>
+                    <img src="./images/arrow-right.svg" alt="Стрелка">
+                </button>
+            </fieldset>
+        </form>
+
+        <div class="auth__text-container">
+            <p class="auth__text">У вас ещё нет аккаунта?</p>
+            <p class="auth__link-text">Зарегистрироваться</p>
+        </div>
+        <div class="auth__text-container">
+            <p class="auth__text">Возникли проблемы со входом?</p>
+            <p class="auth__link-text">Восстановить доступ</p>
+        </div>
+
+    </section>
+
+    login-form

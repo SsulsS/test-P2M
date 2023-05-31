@@ -1,0 +1,9 @@
+.form__label{
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}

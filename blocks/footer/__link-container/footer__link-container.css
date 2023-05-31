@@ -1,0 +1,10 @@
+.footer__link-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top:0;
+    height: 34px;
+    max-width: 614px;
+    position: relative;
+}

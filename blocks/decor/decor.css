@@ -1,0 +1,12 @@
+.decor{
+    position: fixed;
+    height: 100%;
+    width: 764px;
+    background-color: #F8F8FE;
+    right: 0;
+    overflow: hidden;
+}
+
+.decor__image{
+    margin: 261px 0 0 40px;
+}

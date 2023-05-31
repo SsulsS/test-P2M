@@ -1,0 +1,21 @@
+.auth{
+    max-width: 610px;
+    max-height: 406px;
+    margin: 149px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s, opacity 0.2s ease-in;  
+
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width:360px) {
+    .auth{
+        max-width: 328px;
+        margin: 66px auto 0 auto;
+        max-height: 771px;
+    }
+}

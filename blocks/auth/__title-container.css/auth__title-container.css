@@ -1,0 +1,12 @@
+.auth__title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+@media screen and (max-width:360px) {
+    .auth__title-container{
+        margin-top: 70px;
+    }
+}
