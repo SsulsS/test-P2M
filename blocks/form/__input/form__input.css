@@ -1,6 +1,6 @@
 .form__input{
     height: 48px;
-    width: 380px;
+    width: 302px;
     border: 1px solid #F1ECFF;
     border-radius: 10px;
     margin-right: 20px;
@@ -8,16 +8,21 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 130%;
-    text-align: center;
-    
-    padding: 0;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width:360px) {
+.form__input:focus{
+    text-align: start;
+}
+
+.form__input:focus::placeholder{
+    color: transparent;
+}
+
+@media screen and (max-width:767px) {
     .form__input{
-        height: 48px;
-        width: 328px;
+        max-width: 296px;
         margin: 0;
-        padding: 0;
     }
 }

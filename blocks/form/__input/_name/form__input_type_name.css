@@ -1,0 +1,9 @@
+.form__input_type_name{
+    width: 380px;
+}
+
+@media screen and (max-width:767px) {
+    .form__input_type_name{
+        max-width: 328px;
+    }
+}

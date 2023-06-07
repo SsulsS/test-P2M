@@ -31,3 +31,8 @@
     </section>
 
     login-form
+
+    console.log(".addEventListener('click', function (evt) {
+        evt.target.classList.toggle('form__hide-button_active');
+        console.log(123);
+      });");

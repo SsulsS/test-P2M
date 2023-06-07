@@ -4,9 +4,52 @@
     width: 764px;
     background-color: #F8F8FE;
     right: 0;
+    top: 0;
     overflow: hidden;
 }
 
 .decor__image{
     margin: 261px 0 0 40px;
+}
+
+@media screen and (max-width:1919px) {
+    .decor{
+        width: 700px;
+    }
+}
+
+@media screen and (max-width:1880px) {
+    .decor{
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:1720px) {
+    .decor{
+        width: 450px;
+    }
+}
+
+@media screen and (max-width:1580px) {
+    .decor{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:1480px) {
+    .decor{
+        width: 250px;
+    }   
+}
+
+@media screen and (max-width:1380px) {
+    .decor{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:1275px) {
+    .decor{
+        display:none;
+    }
 }

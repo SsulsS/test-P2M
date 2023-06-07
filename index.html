@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="./vendor/normalize.css">
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
@@ -30,12 +31,9 @@
         <form name="login-form" class="form login-form" novalidate>
             <fieldset class="form__set">
                 <label class="form__label">
-                    <input type="text" class="form__input form__input_type_name" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
+                    <input type="text" class="form__input form__input_type_name form__input_type_login " id="name-input" placeholder="Введите номер телефона" name="form-input-name" required>
                     <span class="form__span form__input-error name-input-error"></span>
                 </label>
-                <button class="form__hide-button">
-                    <img src="./images/hide.svg" alt="">
-                </button>
                 <button type="submit" class="form__button form__submit" name="form-button">
                     <p>Далее</p>
                     <img src="./images/arrow-right.svg" alt="Стрелка">
@@ -59,15 +57,17 @@
     <section class="auth">
         <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
         <div class="auth__title-container">
-            <h2 class="auth__title">Войти в личный кабинет</h2>
-            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+            <h2 class="auth__title">Здравствуйте!</h2>
+            <p class="auth__subtitle">Введите пароль</p>
         </div>
 
         <form name="login-form" class="form password-form" novalidate>
             <fieldset class="form__set">
                 <label class="form__label">
-                    <input type="password" class="form__input form__input_type_name form__input" id="name-input" placeholder="Введите пароль    " name="form-input-name" minlength="2" maxlength="40" required>
+                    <input type="password" class="form__input form__input_type_password" id="name-input" placeholder="Введите пароль" name="form-input-name"  required>
                     <span class="form__span form__input-error name-input-error"></span>
+                    <button type="button" class="form__hide-button">
+                    </button>
                 </label>
                 <button type="submit" class="form__button form__submit" name="form-button">
                     <p>Далее</p>
@@ -91,19 +91,22 @@
     <section class="auth">
         <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
         <div class="auth__title-container">
-            <h2 class="auth__title">Войти в личный кабинет</h2>
-            <p class="auth__subtitle">Войдите, чтобы начать использовать платёжные решения PAY2ME.</p>
+            <h2 class="auth__title">Что-то пошло не так</h2>
+            <p class="auth__subtitle">Вы ввели неверный логин или пароль.</p>
         </div>
 
         <form name="login-form" class="form error-form" novalidate>
             <fieldset class="form__set form__set-error">
                 <label class="form__label">
-                    <input type="text" class="form__input form__input_type_login form__input" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
-                    <span class="form__input-error name-input-error"></span>
+                    <input type="text" class="form__input form__input_type_login form__input-error form__input_type_error" id="name-input" placeholder="Введите номер телефона" name="form-input-name"  required>
+                    <span class="form__span name-input-error span_login">Возможно, электронная почта введена некорректно. Попробуйте ещё раз.</span>
+                    <button type="button" class="form__clear-button"></button>
                 </label>
                 <label class="form__label">
-                    <input type="password" class="form__input form__input_type_password form__input" id="name-input" placeholder="Введите номер телефона или электронную почту" name="form-input-name" minlength="2" maxlength="40" required>
-                    <span class="form__input-error name-input-error"></span>
+                    <input type="password" class="form__input form__input_type_password form__input-error form__input_type_error" id="name-input" placeholder="Введите пароль" name="form-input-name"  required>
+                    <span class="form__span name-input-error span_password">Возможно, пароль введён некорректно. Попробуйте ещё раз.</span>
+                    <button type="button" class="form__clear-button"></button>
+                    <button type="button" class="form__hide-button"></button>
                 </label>
                 <button type="submit" class="form__button form__submit" name="form-button">
                     <p>Далее</p>
@@ -123,10 +126,12 @@
     </section>
 
     <section class="chat">
-        <p class="chat__text">Нужна помощь?</p>
-        <button class="chat__button">
-            <img src="./images/chat.svg" alt="Чат">
-        </button>
+        <div class="chat__container">
+            <p class="chat__text">Нужна помощь?</p>
+            <button class="chat__button">
+                <img src="./images/chat.svg" alt="Чат" class="chat__image">
+            </button>
+        </div>
     </section>
 
 </main>
@@ -139,9 +144,11 @@
         <p class="footer__text">Юридический адрес 125445, Г. Москва, Ул. Беломорская, Д. 11, К. 1/290</p>
     </div>
     
-    <div class="footer__link-container">
-        <p class="footer__link-text">Политика конфиденциальности</p>
-        <p class="footer__link-text">Пользовательское соглашение</p>
+    <div class="footer__container">
+        <div class="footer__link-container">
+            <p class="footer__link-text">Политика конфиденциальности</p>
+            <p class="footer__link-text">Пользовательское соглашение</p>
+        </div>
         <button  type="button" class="footer__button" >
             <img src="./images/Flag.svg" alt="флаг" class="footer__button-image">
             <p class="footer__button-text">Ru</p>

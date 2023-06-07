@@ -1,4 +1,6 @@
 .page{
     font-family: 'Open Sans', Arial, sans-serif;
     position: relative;
+    width: 100%;
+    height: 100%;
 }

@@ -8,8 +8,8 @@ const errorForm = document.querySelector('.error-form');
 //INPUTS
 const loginInput = loginForm.querySelector('.form__input');
 const passwordInput = passwordForm.querySelector('.form__input');
-const errorLoginInput = document.querySelector('.form__input_type_login');
-const errorPasswordInput = document.querySelector('.form__input_type_password');
+const errorLoginInput = errorForm.querySelector('.form__input_type_login');
+const errorPasswordInput = errorForm.querySelector('.form__input_type_password');
 
 //BUTTONS
 const backButton = document.querySelector('.back-button');
@@ -17,8 +17,8 @@ const loginButton = loginForm.querySelector('.form__button')
 const passwordButton = passwordForm.querySelector('.form__button')
 const errorButton = errorForm.querySelector('.form__button')
 const footerButton = document.querySelector('.footer__button');
-
-
+const hideButtons = document.querySelectorAll('.form__hide-button');
+const clearButtons = document.querySelectorAll('.form__clear-button');
 
 function closeEsc(evt){
     if (evt.key === 'Escape'){
@@ -58,6 +58,61 @@ function closeEsc(evt){
     check(footerPopup);
   })
 
+hideButtons.forEach((element)=> {
+  element.addEventListener('click', function (evt) {
+    evt.target.classList.toggle('form__hide-button_active');
+    passwordCheck(element.parentNode)
+  });
+})
+
+clearButtons.forEach((element)=> {
+  element.addEventListener('click', function () {
+    clearInputs(element)
+    element.classList.remove('form__clear-button_active')
+});
+})
+
+function clearInputs(clearButton) {
+  const parent = clearButton.parentNode
+  const input = parent.querySelector('.form__input')
+  const span = parent.querySelector('.form__span')
+  if (input.classList.contains('form__input_type_login')) {
+    document.querySelectorAll('.form__input_type_login').forEach(element => {
+      element.value = ''
+      element.classList.remove('form__input_type_error')
+      errorForm.querySelector('.span_login').classList.add('form__span_inactive')
+    });
+  } else if(input.classList.contains('form__input_type_password')) {
+    document.querySelectorAll('.form__input_type_password').forEach(element => {
+      element.value = ''
+      element.classList.remove('form__input_type_error')
+      errorForm.querySelector('.span_password').classList.add('form__span_inactive')
+    });
+  } 
+}
+  
+function show(element) {
+  const input = element.querySelector('.form__input');
+  input.setAttribute('type', 'text');
+}
+
+function hide(element) {
+  var input = element.querySelector('.form__input');
+  input.setAttribute('type', 'password');
+}
+
+let pwShow = 0;
+
+function passwordCheck(element) {
+  if (pwShow == 0) {
+      pwShow = 1;
+      show(element);
+  } else {
+      pwShow = 0;
+      hide(element);
+  }
+}
+
   const profiles = [
     {
       name: 'Вадим',
@@ -90,7 +145,17 @@ function backTransition(){
   loginForm.closest('.auth').classList.add('auth_opened');
   passwordForm.closest('.auth').classList.remove('auth_opened');
 };
-backButton.addEventListener('click',backTransition);
+function backTransitionFromError(){
+  passwordForm.closest('.auth').classList.add('auth_opened');
+  errorForm.closest('.auth').classList.remove('auth_opened');
+}
+backButton.addEventListener('click',function(){
+  if (errorForm.closest('.auth').classList.contains('auth_opened')){
+    backTransitionFromError()
+  }else{
+    backTransition()
+  }
+});
 
 function transition(event) {
   event.preventDefault();
@@ -99,11 +164,22 @@ function transition(event) {
 };
 loginButton.addEventListener('click',transition);
 
-function transitionError() {
+function transitionInError() {
   passwordForm.closest('.auth').classList.remove('auth_opened');
   errorForm.closest('.auth').classList.add('auth_opened');
+
   errorLoginInput.value = loginInput.value;
   errorPasswordInput.value = passwordInput.value;
+
+  errorLoginInput.classList.add('form__input_type_error')
+  errorPasswordInput.classList.add('form__input_type_error')
+
+  errorForm.querySelector('.span_login').classList.remove('form__span_inactive')
+  errorForm.querySelector('.span_password').classList.remove('form__span_inactive')
+
+  clearButtons.forEach((element)=> {
+    element.classList.add('form__clear-button_active');
+  })
 }
 
 function checkError(){
@@ -114,7 +190,7 @@ function checkError(){
     }
   }
   if (!verify) {
-    transitionError()
+    transitionInError()
   }
 };
 passwordButton.addEventListener('click', checkError)

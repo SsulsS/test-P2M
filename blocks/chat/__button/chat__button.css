@@ -1,7 +1,27 @@
 .chat__button{
     border: none;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(180deg, #744CED 18.75%, #B650E6 88.02%);
     border-radius: 100%;
+    padding: 0;
+    margin-right: 32px;
+    opacity: 1;
+    transition: opacity 0.5s ease 0s; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px){
+    .chat__button{
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
 }

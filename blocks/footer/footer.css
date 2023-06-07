@@ -1,5 +1,19 @@
 .footer{
-    margin: 277px 0 30px 340px;
+    margin: 0 0 30px 340px;
     max-width: 614px;
     max-height: 106px;
+}
+
+@media screen and (max-width:1275px){
+    .footer{
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .footer{
+        margin: 0 auto 32px auto;
+        max-width: 328px;
+        max-height: 155px;
+    }
 }

@@ -1,4 +1,19 @@
 .content{
-    margin-left: 340px;
+    margin:0 0 0 340px;
     position: relative;
+    max-width: 797px;
+}
+
+@media screen and (max-width:1275px){
+    .content{
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .content{
+        max-width: 328px;
+        margin: auto;
+    }
+    
 }
