@@ -1,4 +1,4 @@
-.footer__button{
+.footer__button {
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -8,9 +8,10 @@
     margin: 7px 0 7px 0;
     border: none;
     padding: 0;
+    color: #4A3C73;
 }
 
-@media screen and (max-width:757px) {
+@media screen and (max-width:767px) {
     .footer__button{
         margin: 41px 0 0 0;
     }

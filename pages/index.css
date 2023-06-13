@@ -6,7 +6,6 @@
 
 @import url(../blocks/back-button/back-button.css);
 @import url(../blocks/back-button/__image/back-button__image.css);
-@import url(../blocks/back-button/__text/back-button__text.css);
 
 @import url(../blocks/auth/auth.css);
 @import url(../blocks/auth/_opened/auth_opened.css);
@@ -34,6 +33,7 @@
 @import url(../blocks/form/__clear-button/_active/form__clear-button_active.css);
 @import url(../blocks/form/__span/form__span.css);
 @import url(../blocks/form/__span/_inactive/form__span_inactive.css);
+@import url(../blocks/form/__container/form__container.css);
 
 @import url(../blocks/chat/chat.css);
 @import url(../blocks/chat/__container/chat__container.css);
@@ -50,9 +50,8 @@
 @import url(../blocks/footer-popup/__text/footer-popup__text.css);
 
 @import url(../blocks/footer/footer.css);
-@import url(../blocks/footer/__button-image/footer__button-image.css);
-@import url(../blocks/footer/__button-text/footer__button-text.css);
 @import url(../blocks/footer/__button/footer__button.css);
+@import url(../blocks/footer/__button-image/footer__button-image.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/footer/__container/footer__container.css);
 @import url(../blocks/footer/__link-container/footer__link-container.css);

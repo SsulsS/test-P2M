@@ -2,26 +2,26 @@
 <html lang="Ru">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="./vendor/normalize.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo/favicon.png" sizes="any">
+    <title>Test - PAY2ME - Платежные продукты для бизнеса в интернете</title>
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 
 <body class="page">
-
 <main class="content">
 
     <div class="decor">
-        <img src="./images/prew.png" alt="" class="decor__image">
+        <img src="./images/prew.png" alt="фото" class="decor__image">
     </div>
 
     <button class="back-button">
         <img src="./images/arrow-left.svg" alt="Стрелка" class="back-button__image">
-        <p class="back-button__text">Назад</p>
+        Назад
     </button>
 
     <section class="auth auth_opened">
-
         <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
         <div class="auth__title-container">
             <h2 class="auth__title">Войти в личный кабинет</h2>
@@ -31,11 +31,11 @@
         <form name="login-form" class="form login-form" novalidate>
             <fieldset class="form__set">
                 <label class="form__label">
-                    <input type="text" class="form__input form__input_type_name form__input_type_login " id="name-input" placeholder="Введите номер телефона" name="form-input-name" required>
-                    <span class="form__span form__input-error name-input-error"></span>
+                    <input type="text" class="form__input form__input_type_name form__input_type_login " id="login-input" placeholder="Введите номер телефона" name="form-input-name" required>
+                    <span class="form__span form__input-error login-input-error"></span>
                 </label>
                 <button type="submit" class="form__button form__submit" name="form-button">
-                    <p>Далее</p>
+                    Далее
                     <img src="./images/arrow-right.svg" alt="Стрелка">
                 </button>
             </fieldset>
@@ -49,10 +49,7 @@
             <p class="auth__text">Возникли проблемы со входом?</p>
             <p class="auth__link">Восстановить доступ</p>
         </div>
-
     </section>
-
-<!--------------------------------------------------------------------->
 
     <section class="auth">
         <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
@@ -64,13 +61,12 @@
         <form name="login-form" class="form password-form" novalidate>
             <fieldset class="form__set">
                 <label class="form__label">
-                    <input type="password" class="form__input form__input_type_password" id="name-input" placeholder="Введите пароль" name="form-input-name"  required>
-                    <span class="form__span form__input-error name-input-error"></span>
-                    <button type="button" class="form__hide-button">
-                    </button>
+                    <input type="password" class="form__input form__input_type_password" id="password-input" placeholder="Введите пароль" name="form-input-name"  required>
+                    <span class="form__span form__input-error password-input-error"></span>
                 </label>
+                <button type="button" class="form__hide-button"></button>
                 <button type="submit" class="form__button form__submit" name="form-button">
-                    <p>Далее</p>
+                    Далее
                     <img src="./images/arrow-right.svg" alt="Стрелка">
                 </button>
             </fieldset>
@@ -86,8 +82,6 @@
         </div>
     </section>
 
- <!--------------------------------------------------------------->
-
     <section class="auth">
         <img src="./images/PAY2ME.svg" alt="логотип" class="auth__logo">
         <div class="auth__title-container">
@@ -98,18 +92,21 @@
         <form name="login-form" class="form error-form" novalidate>
             <fieldset class="form__set form__set-error">
                 <label class="form__label">
-                    <input type="text" class="form__input form__input_type_login form__input-error form__input_type_error" id="name-input" placeholder="Введите номер телефона" name="form-input-name"  required>
-                    <span class="form__span name-input-error span_login">Возможно, электронная почта введена некорректно. Попробуйте ещё раз.</span>
-                    <button type="button" class="form__clear-button"></button>
+                    <input type="text" class="form__input form__input_type_login form__input-error form__input_type_error" id="mist-login-input" placeholder="Введите номер телефона" name="form-input-name"  required>
+                    <span class="form__span mist-password-input-error span-login">Возможно, электронная почта введена некорректно. Попробуйте ещё раз.</span>
+                    
                 </label>
-                <label class="form__label">
-                    <input type="password" class="form__input form__input_type_password form__input-error form__input_type_error" id="name-input" placeholder="Введите пароль" name="form-input-name"  required>
-                    <span class="form__span name-input-error span_password">Возможно, пароль введён некорректно. Попробуйте ещё раз.</span>
+                <button type="button" class="form__clear-button"></button>
+                <div class="form__container">
+                    <label class="form__label">
+                        <input type="password" class="form__input form__input_type_password form__input-error form__input_type_error" id="mist-password-input" placeholder="Введите пароль" name="form-input-name"  required>
+                        <span class="form__span mist-password-input-error span-password">Возможно, пароль введён некорректно. Попробуйте ещё раз.</span>
+                    </label>
                     <button type="button" class="form__clear-button"></button>
                     <button type="button" class="form__hide-button"></button>
-                </label>
+                </div>
                 <button type="submit" class="form__button form__submit" name="form-button">
-                    <p>Далее</p>
+                    Далее
                     <img src="./images/arrow-right.svg" alt="Стрелка">
                 </button>
             </fieldset>
@@ -151,18 +148,18 @@
         </div>
         <button  type="button" class="footer__button" >
             <img src="./images/Flag.svg" alt="флаг" class="footer__button-image">
-            <p class="footer__button-text">Ru</p>
+            Ru
         </button>
 
         <div class="footer-popup">
             <div class="footer-popup__overlay"></div>
             <div class="footer-popup__elements-container footer-popup__elements-container_active">
-                <img src="./images/Flag.svg" alt="флаг" class="footer-popup__image">
+                <img src="./images/Flag.svg" alt="флагРу" class="footer-popup__image">
                 <p class="footer-popup__sign">RU</p>
                 <p class="footer-popup__text">Русский</p>
             </div>
             <div class="footer-popup__elements-container">
-                <img src="./images/usaflag.svg" alt="Флаг" class="footer-popup__image">
+                <img src="./images/usaflag.svg" alt="ФлагИнг" class="footer-popup__image">
                 <p class="footer-popup__sign">EN</p>
                 <p class="footer-popup__text">Английский</p>
             </div>
