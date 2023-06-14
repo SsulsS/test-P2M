@@ -24,6 +24,34 @@ const clearButtons = document.querySelectorAll('.form__clear-button');
 const loginSpan = document.querySelector('.span-login');
 const passwordSpan = document.querySelector('.span-password');
 
+const profiles = [
+	{
+		name: 'Вадим',
+		login: '79857878780',
+		password: '123',
+	},
+	{
+		name: 'Александр',
+		login: '79859925837',
+		password: 'password',
+	},
+	{
+		name: 'Дмитрий',
+		login: '79859492863',
+		password: 'abc',
+	},
+	{
+		name: 'Глеб',
+		login: '79857288235',
+		password: 'qwe',
+	},
+	{
+		name: 'Даниил',
+		login: '79851289183',
+		password: '111111',
+	},
+];
+
 function closeEsc(evt) {
 	if (evt.key === 'Escape') {
 		const openedWind = document.querySelector('.footer-popup_opened');
@@ -118,34 +146,6 @@ function passwordCheck() {
 		hide(input);
 	}
 }
-
-const profiles = [
-	{
-		name: 'Вадим',
-		login: '79857878780',
-		password: '123',
-	},
-	{
-		name: 'Александр',
-		login: '79859925837',
-		password: 'password',
-	},
-	{
-		name: 'Дмитрий',
-		login: '79859492863',
-		password: 'abc',
-	},
-	{
-		name: 'Глеб',
-		login: '79857288235',
-		password: 'qwe',
-	},
-	{
-		name: 'Даниил',
-		login: '79851289183',
-		password: '111111',
-	},
-];
 
 function backTransition() {
 	loginForm.closest('.auth').classList.add('auth_opened');
